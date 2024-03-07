@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-// Themes
+// DefinitelyTyped
 
 const Title = styled.h1`
   color: ${(props) => props.theme.textColor};

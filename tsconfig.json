@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+    /* Language and Environment */
+    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    /* Modules */
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */ /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    /* Type Checking */
+    "strict": true /* Enable all strict type-checking options. */ /* Skip type checking .d.ts files that are included with TypeScript. */,
+    "skipLibCheck": true,
+    "jsx": "react-jsx" /* Skip type checking all .d.ts files. */
+  }
+}
+
+/*
+How to add Typescript to an existing React Project
+
+1. npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+2. src 폴더 안에 있던 App.js와 index.js 파일을 App.tsx와 index.tsx 로 바꾼다.
+3. "npx tsc --init" 명령어로 tsconfig.json 파일 생성한 후, tsconfig.json 파일에 "jsx": "react-jsx"추가
+-------------------------------------------
+{
+"compilerOptions": {
+......
+"jsx": "react-jsx"
+}
+}
+-------------------------------------------
+4. src/index.tsx에서 수정
+--------------------------------------------------------------
+import ReactDOM from "react-dom/client"
+
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+---------------------------------------------------------------
+5. npm i --save-dev @types/styled-components*/
