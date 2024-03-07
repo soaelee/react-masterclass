@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-// Animations and Pseudo Selectors
+// Pseudo Selectors part Two
 
 const Father = styled.div`
   display: flex;
@@ -20,6 +20,9 @@ const rotationAnimation = keyframes`
   }
 `;
 
+const Emoji = styled.span`
+  font-size: 36px;
+`;
 const Box = styled.div`
   height: 200px;
   width: 200px;
@@ -28,22 +31,17 @@ const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  span {
-    font-size: 36px;
-    &:hover {
-      font-size: 40px;
-    }
-    &:active {
-      opacity: 0;
-    }
+  ${Emoji}:hover {
+    font-size: 98px;
   }
 `;
 function App() {
   return (
     <Father>
       <Box>
-        <span>😃</span>
+        <Emoji>😃</Emoji>
       </Box>
+      <Emoji>😃</Emoji>
     </Father>
   );
 }
