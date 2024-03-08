@@ -1,12 +1,12 @@
 import Circle from "./Circle";
 
-// Typing the props
+// Optional props
 
 function App() {
   return (
     <div>
-      <Circle bgColor={"teal"} />
-      <Circle bgColor={"tomato"} />
+      <Circle bgColor={"teal"} borderColor="pink" />
+      <Circle bgColor={"tomato"} text="im here" />
     </div>
   );
 }
