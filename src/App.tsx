@@ -1,6 +1,6 @@
 import Circle from "./Circle";
 
-// Optional props
+// State
 
 function App() {
   return (

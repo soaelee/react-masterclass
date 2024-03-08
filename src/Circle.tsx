@@ -1,9 +1,30 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
+
 interface CircleProps {
   bgColor: string;
   borderColor?: string;
   text?: string;
 }
+
+const Circle = ({
+  bgColor,
+  borderColor,
+  text = "default text",
+}: CircleProps) => {
+  const [value, setValue] = useState<number | string>(1);
+  const [counter, setCounter] = useState(1);
+
+  useEffect(() => {
+    setValue("hello");
+  }, []);
+
+  return (
+    <Container bgColor={bgColor} borderColor={borderColor ?? "white"}>
+      {text}
+    </Container>
+  );
+};
 
 interface ContainerProps {
   bgColor: string;
@@ -16,17 +37,5 @@ const Container = styled.div<ContainerProps>`
   background-color: ${(props) => props.bgColor};
   border: 10px solid ${(props) => props.borderColor};
 `;
-
-const Circle = ({
-  bgColor,
-  borderColor,
-  text = "default text",
-}: CircleProps) => {
-  return (
-    <Container bgColor={bgColor} borderColor={borderColor ?? "white"}>
-      {text}
-    </Container>
-  );
-};
 
 export default Circle;
